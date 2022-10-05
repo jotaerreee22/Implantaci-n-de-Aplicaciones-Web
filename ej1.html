@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1</title>
+</head>
+<script>
+  function frasemodificada(){
+    var frasem = document.querySelector("frase1 > span")
+    frase.innerHTML = "Esta es la frase modificada"
+  }
+  
+</script>
+
+<style>
+  div{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+  }
+
+  .frase1{
+    color: black;
+  }
+</style>
+
+<body>
+  <div>
+    <p class="frase1">
+      <span>Este es el contendido del div1</span>
+    </p>
+    
+  </div>
+  <input type="button" value="Cambiar texto" onClick="frasemodificada()"><br>
+  <input type="button" value="Cambiar color de fondo" onClick="check()"><br>
+  <input type="button" value="Cambiar tipo y color de letra" onClick="check()">
+</body>
+</html>

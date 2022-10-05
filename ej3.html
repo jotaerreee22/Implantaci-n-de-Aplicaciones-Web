@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<script>
+    function correccion_test(){
+        var p1=document.getElementById("p1").value;
+        var p2=document.getElementById("p2").value;
+        var p3=document.getElementById("p3").value;
+        var aciertos = 0;
+        var fallos = 0;
+        var nota;
+
+        if (document.pregunta1.uruguay[uruguay].checked==true){
+        p1 = 1;
+        aciertos++;
+        } else if (document.pregunta1.brasil[brasil].checked==true){
+            p1 = -0.5;
+                fallos++;
+        } else if (document.pregunta1.alemania[alemania].checked==true){
+            p1 = -0.5;
+                fallos++;
+        } else if (document.pregunta1.francia[francia].checked==true){
+            p1 = -0.5;
+                fallos++;
+        }
+
+        if (document.pregunta2.klose[klose].checked==true){
+        p2 = 1;
+        aciertos++;
+        } else if (document.pregunta2.cr7[cr7].checked==true){
+            p2 = -0.5;
+                fallos++;
+        } else if (document.pregunta2.messi[messi].checked==true){
+            p2 = -0.5;
+                fallos++;
+        } else if (document.pregunta2.rn9[rn9].checked==true){
+            p2 = -0.5;
+                fallos++;
+        }
+
+        if (document.pregunta3.dia20[dia20].checked==true){
+        p3 = 1;
+        aciertos++;
+        } else if (document.pregunta3.dia22[dia22].checked==true){
+            p3 = -0.5;
+                fallos++;
+        } else if (document.pregunta3.dia17[dia17].checked==true){
+            p3 = -0.5;
+                fallos++;
+        } else if (document.pregunta3.dia16[dia16].checked==true){
+            p3 = -0.5;
+                fallos++;
+        }
+
+        nota = p1+p2+p3;
+        if(nota<0){
+        puntuacion = 0;
+        }else{
+        puntuacion = nota;
+        document.write("El resultado es: "+puntuacion)
+        }
+       
+    }
+</script>
+<style>
+    .p1{
+        background-color: whitesmoke;
+    }
+
+    .p2{
+        background-color: whitesmoke;
+    }
+
+    .p3{
+        background-color: whitesmoke;
+    }
+
+</style>
+<body>
+    <div class="p1">
+        <p>¿Qué selección ganó la primera Copa del Mundo?</p>
+        <form class="pregunta1">         
+            Seleccione una:<br>
+            <input type="radio" name="brasil" id="brasil"> a. Brasil<br>
+            <input type="radio" name="alemania" id="alemania"> b. Alemania<br>
+            <input type="radio" name="uruguay" id="uruguay"> c. Uruguay<br>
+            <input type="radio" name="francia" id="francia"> d. Francia<br>
+        </form>
+    </div>
+    
+    <div class="p2">
+        <p>¿Quién es el máximo goleador de la historia de los mundiales?</p>
+        <form class="pregunta2">
+        Seleccione una:<br>
+            <input type="radio" name="klose" id="klose"> a. Miroslav Klose<br>
+            <input type="radio" name="cr7" id="cr7"> b. Cristiano Ronaldo<br>
+            <input type="radio" name="messi" id="messi"> c. Leo Messi<br>
+            <input type="radio" name="rn9" id="rn9"> d. Ronaldo Nazario<br>
+        </form>
+    </div>
+
+    <div class="p3">
+        <p>¿Qué día empieza el mundial de Qatar 2022?</p>
+        <form class="pregunta3">
+        Seleccione una:<br>
+            <input type="radio" name="dia22" id="dia22"> a. 22 de noviembre<br>
+            <input type="radio" name="dia17" id="dia17"> b. 17 de noviembre<br>
+            <input type="radio" name="dia20" id="dia20"> c. 20 de noviembre<br>
+            <input type="radio" name="dia16" id="dia16"> d. 16 de noviembre<br>
+        </form>
+    </div>
+    <br><br>
+    <input type="button" value="Siguiente" onclick="correccion_test()">
+    
+
+</body>
+</body>
+</html>

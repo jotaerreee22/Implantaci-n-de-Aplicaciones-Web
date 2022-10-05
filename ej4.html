@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<style>
+    html{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    h1{
+        background-color: orange;
+        color: blue;
+        font-weight: normal;
+    }
+
+    fieldset{
+        border-width: 5px;
+        border-color: black;
+        background-color: yellow;
+    }
+</style>
+
+<script>
+
+    function check(){
+    var nombre=document.getElementById("nombre").value;
+    var apellido1=document.getElementById("apellido1").value;
+    var apellido2=document.getElementById("apellido2").value;
+    var correo=document.getElementById("correo").value;
+    var ss1=document.getElementById("ss1").value;
+    var ss2=document.getElementById("ss2").value;
+    
+    if (correo.indexOf("@")==-1){
+        alert("El correo debe contener una @");
+        document.getElementById("correo").focus();
+    }
+    if(ss2.length <=2){
+        alert("El nombre no tiene la longitud adecuada.");
+        document.getElementById("ss2").focus();
+    }
+    if(ss1.length =7){
+        alert("El apellido no tiene la longitud adecuada.");
+        document.getElementById("ss1").focus();
+    }
+    if(nombre.length <1){
+        alert("El campo de nombre está vacío.");
+        document.getElementById("nombre").focus();
+    }
+    if(apellido1.length <1){
+        alert("El campo de primer apellido está vacío.");
+        document.getElementById("apellido1").focus();
+    }
+    if(apellido2.length <1){
+        alert("El campo de apellido2 está vacío.");
+        document.getElementById("apellido2").focus();
+    }
+    if(correo.length <1){
+        alert("El campo de correo electronico está vacío.");
+        document.getElementById("correo").focus();
+    }
+    if(ss1.length <1){
+        alert("El campo de numero de la ss está vacío.");
+        document.getElementById("ss1").focus();
+    }
+    if(ss2.length <1){
+        alert("El campo de numero de la ss está vacío.");
+        document.getElementById("ss2").focus();
+    }
+
+    }
+
+</script>
+
+<body>
+    <h1>Solicitud del Informe de Vida Laboral</h1>
+    <fieldset>
+        <form>
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" name="nombre" id="nombre"></td>
+                </tr>
+                <tr>
+                    <td>Primer Apellido:</td>
+                    <td><input type="text" name="apellido1" id="apellido1"></td>
+                </tr>
+                <tr>
+                    <td>Segundo Apellido:</td>
+                    <td><input type="text" name="apellido2" id="apellido2"></td>
+                </tr>
+                <tr>
+                    <td>Correo Electrónico:</td>
+                    <td><input type="text" name="correo" id="correo"></td>
+                </tr>
+                <tr>
+                    <td>Número de afiliado a la S.S.:</td>
+                    <td><select id="provincia">
+                        <option>A CORUÑA</option>
+                        <option>MADRID</option>
+                        <option>BARCELONA</option>
+                      </select> / <input type="text" name="ss1" id="ss1"> / <input type="text" name="ss2" id="ss2"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    <input type="button" value="Enviar" onClick="check()"><input type="button" value="Borrar" onClick="borrar()">
+</body>
+</html>

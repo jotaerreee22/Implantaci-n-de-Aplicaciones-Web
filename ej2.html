@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<script>
+
+</script>
+<body>
+    <fieldset>
+        Configuración del Coche<br>
+    </fieldset>
+    <fieldset>
+        <form>
+            Tipo de Motor<br>
+            <input type="radio" name="motor" id="gasolina">Gasolina
+            <input type="radio" name="motor" id="diesel">Diesel (+1500 E)
+            <input type="radio" name="motor" id="hibrido">Híbrido (+3000 E)
+        </form>
+    </fieldset>
+    <fieldset>
+        <form>
+            Tipo de Puertas<br>
+            <input type="radio" name="puerta" id="trespuertas">3 Puertas (-2000E) (Solo con Gasolina)
+            <input type="radio" name="puerta" id="cincopuertas">5 Puertas
+            <input type="radio" name="puerta" id="familiar">Híbrido (+3000 E)
+        </form>
+    </fieldset>
+    <fieldset>
+        <form>
+            Tipo de Pintura<br>
+            <input type="radio" name="color" id="rojo">Rojo
+            <input type="radio" name="color" id="verde">Verde
+            <input type="radio" name="color" id="naranja">Naranja
+            <input type="radio" name="color" id="blanco">Blanco (-500 E)
+            <input type="radio" name="color" id="negro">Negro (-600 E)
+        </form>
+    </fieldset>
+    <fieldset>
+        <form>
+            Seleccionar las que deseen:<br>
+            <input type="checkbox" name="metalizada" id="metalizada">Metalizada (+750 E) (Solo Rojo, Verde o Naranja)<br>
+            <input type="checkbox" name="llantas" id="llantas">Llantas (+200 E)<br>
+            <input type="checkbox" name="climatizador" id="climatizador">Climatizador (+800 E)<br>
+            <input type="checkbox" name="gps" id="gps">GPS (+340 E)<br>
+            <input type="checkbox" name="dvd" id="dvd">DVD (+800 E) (Solo modelo Familiar)<br>
+        </form>
+    </fieldset>
+    <fieldset>
+        <p>Total a Cobrar</p>
+        <input type="button" value="Calcular" onclick="validarform()">
+    </fieldset>
+</body>
+</html>
